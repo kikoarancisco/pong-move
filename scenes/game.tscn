@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cq4ulbkbimh25"]
+
+[ext_resource type="Script" uid="uid://hsiriv1xkwqh" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://du8fsml6ttmi" path="res://scenes/paddle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bcyg4bt120qc4" path="res://scenes/ball.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://sv42p2a2tt87" path="res://scenes/wall.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bfoybf1338hst" path="res://scenes/detector.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://bjl58cxn4ffm4" path="res://scenes/hud.tscn" id="6_p57ef"]
+[ext_resource type="AudioStream" uid="uid://dmgj4u2jwi5vm" path="res://assets/explosion.wav" id="7_u5sy4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_m2g58"]
+
+[sub_resource type="GDScript" id="GDScript_yqjtg"]
+script/source = "extends MeshInstance2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Game" type="Node2D" unique_id=940573014]
+script = ExtResource("1_uwrxv")
+
+[node name="background" type="MeshInstance2D" parent="." unique_id=496467998]
+modulate = Color(0, 0, 0, 1)
+z_index = -10
+position = Vector2(639.25, 360.75)
+scale = Vector2(1279.5, 722.5)
+mesh = SubResource("QuadMesh_m2g58")
+script = SubResource("GDScript_yqjtg")
+metadata/_edit_lock_ = true
+
+[node name="PaddleOne" parent="." unique_id=1018700247 instance=ExtResource("2_yqjtg")]
+position = Vector2(50, 360)
+is_player_one = true
+
+[node name="PaddleTwo" parent="." unique_id=181724242 instance=ExtResource("2_yqjtg")]
+position = Vector2(1230, 360)
+
+[node name="Ball" parent="." unique_id=2086696585 instance=ExtResource("3_lnu2h")]
+position = Vector2(610, 360)
+
+[node name="WallUp" parent="." unique_id=1601607296 instance=ExtResource("4_lbhrr")]
+position = Vector2(640, -10)
+
+[node name="WallDown" parent="." unique_id=909978006 instance=ExtResource("4_lbhrr")]
+position = Vector2(643, 730)
+
+[node name="DetectorLeft" parent="." unique_id=544053402 instance=ExtResource("5_iywne")]
+position = Vector2(-5, 363)
+is_left = true
+
+[node name="DetectorRight" parent="." unique_id=1704196502 instance=ExtResource("5_iywne")]
+position = Vector2(1292, 363)
+
+[node name="StartDelay" type="Timer" parent="." unique_id=1577243683]
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2139517174]
+
+[node name="HUD" parent="CanvasLayer" unique_id=1359191185 instance=ExtResource("6_p57ef")]
+
+[node name="BallOutSound" type="AudioStreamPlayer2D" parent="." unique_id=1992851327]
+stream = ExtResource("7_u5sy4")
