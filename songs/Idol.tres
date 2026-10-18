@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongData" format=3 uid="uid://qsxfmjs85vps"]
+
+[ext_resource type="Script" uid="uid://c3vyq0cnsxiwu" path="res://scripts/song_data.gd" id="1_eqwba"]
+[ext_resource type="AudioStream" uid="uid://df2voim4nelsv" path="res://audio/idol.ogg" id="1_tnf3j"]
+
+[resource]
+script = ExtResource("1_eqwba")
+title = "Idol"
+artist = "Francisco Arada"
+audio = ExtResource("1_tnf3j")
+chart_path = "res://audio/idol.txt"
+metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_sspm7")
 title = "Killing otr"
-artist = "Francisco"
+artist = "Francisco Arada"
 audio = ExtResource("1_80eh8")
 chart_path = "res://audio/kotr.txt"
 metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

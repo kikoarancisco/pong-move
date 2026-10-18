@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongData" format=3 uid="uid://bbvcvaaqoh0gh"]
+
+[ext_resource type="Script" uid="uid://c3vyq0cnsxiwu" path="res://scripts/song_data.gd" id="1_h5076"]
+[ext_resource type="AudioStream" uid="uid://t7svkdctw1gi" path="res://audio/covered.ogg" id="1_k37g7"]
+
+[resource]
+script = ExtResource("1_h5076")
+title = "Covered"
+artist = "Francisco Arada"
+audio = ExtResource("1_k37g7")
+chart_path = "res://audio/covered.txt"
+metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

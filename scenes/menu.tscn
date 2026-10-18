@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cx7wj5jrmpgep" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="Script" uid="uid://c3vyq0cnsxiwu" path="res://scripts/song_data.gd" id="2_con2f"]
 [ext_resource type="Resource" uid="uid://driovh2j8fl1d" path="res://songs/killing_otr.tres" id="3_mhnvy"]
+[ext_resource type="Resource" uid="uid://qsxfmjs85vps" path="res://songs/Idol.tres" id="4_4ytvr"]
+[ext_resource type="Resource" uid="uid://bbvcvaaqoh0gh" path="res://songs/Covered.tres" id="5_g3eks"]
 
 [node name="Menu" type="Control" unique_id=26432824]
 layout_mode = 3
@@ -12,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
-songs = Array[ExtResource("2_con2f")]([ExtResource("3_mhnvy")])
+songs = Array[ExtResource("2_con2f")]([ExtResource("3_mhnvy"), ExtResource("4_4ytvr"), ExtResource("5_g3eks")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=1214215897]
 layout_mode = 1
