@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cq4ulbkbimh25"]
 
 [ext_resource type="Script" uid="uid://hsiriv1xkwqh" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="Resource" uid="uid://driovh2j8fl1d" path="res://songs/killing_otr.tres" id="2_vtaks"]
 [ext_resource type="PackedScene" uid="uid://du8fsml6ttmi" path="res://scenes/paddle.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bcyg4bt120qc4" path="res://scenes/ball.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://sv42p2a2tt87" path="res://scenes/wall.tscn" id="4_lbhrr"]
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 
 [node name="Game" type="Node2D" unique_id=940573014]
 script = ExtResource("1_uwrxv")
+default_song = ExtResource("2_vtaks")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=649751471]
 position = Vector2(640, 360)
@@ -78,3 +80,4 @@ one_shot = true
 stream = ExtResource("7_u5sy4")
 
 [node name="Conductor" parent="." unique_id=1619478478 instance=ExtResource("8_gee14")]
+stream = null

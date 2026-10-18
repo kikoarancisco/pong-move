@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongData" format=3 uid="uid://driovh2j8fl1d"]
+
+[ext_resource type="AudioStream" uid="uid://b4mn7u4o3hvby" path="res://audio/killingotr.ogg" id="1_80eh8"]
+[ext_resource type="Script" uid="uid://c3vyq0cnsxiwu" path="res://scripts/song_data.gd" id="1_sspm7"]
+
+[resource]
+script = ExtResource("1_sspm7")
+title = "Killing otr"
+artist = "Francisco"
+audio = ExtResource("1_80eh8")
+chart_path = "res://audio/kotr.txt"
+metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

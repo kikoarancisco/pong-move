@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bxgmus6olluaj"]
+
+[ext_resource type="Script" uid="uid://cx7wj5jrmpgep" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://c3vyq0cnsxiwu" path="res://scripts/song_data.gd" id="2_con2f"]
+[ext_resource type="Resource" uid="uid://driovh2j8fl1d" path="res://songs/killing_otr.tres" id="3_mhnvy"]
+
+[node name="Menu" type="Control" unique_id=26432824]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+songs = Array[ExtResource("2_con2f")]([ExtResource("3_mhnvy")])
+
+[node name="Background" type="ColorRect" parent="." unique_id=1214215897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1331049999]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1832163554]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2095902615]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "PONG MOVE"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=218178757]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Choose a song"
+horizontal_alignment = 1
+
+[node name="SongList" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=697489754]
+layout_mode = 2
+theme_override_constants/separation = 10

@@ -16,11 +16,14 @@ const PADDLE_LEFT_X = 50.0
 const PADDLE_RIGHT_X = 1230.0
 
 
-func _ready() -> void:
-	load_chart("res://audio/kotr.txt")
+func setup(song: SongData) -> void:
+	stream = song.audio            # which .ogg to play
+	load_chart(song.chart_path)    # which .txt chart to read
 
 
 func load_chart(file_path: String) -> void:
+	all_beats.clear()
+	beats.clear()
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if not file:
 		print("Erro ao abrir ", file_path)
