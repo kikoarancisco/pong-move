@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Pong Move"
-run/main_scene="uid://cq4ulbkbimh25"
+run/main_scene="uid://bxgmus6olluaj"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://vc0l2l7cmb4b"
 
 [display]
 

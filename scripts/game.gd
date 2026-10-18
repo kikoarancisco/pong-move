@@ -14,18 +14,26 @@ extends Node2D
 
 var score = Vector2i.ZERO
 @export var final_score = 11
+@export var default_song: SongData
 
 func _draw() -> void:
 	draw_dashed_line(Vector2(640, 0), Vector2(640, 730), Color.WHITE, 8, 12, false)
 
 func _ready() -> void:
 	ball.hit_evaluated.connect(_on_ball_hit_evaluated)
+	var song: SongData = GameState.selected_song if GameState.selected_song else default_song
+	if song == null:
+		push_error("No song selected and no default_song set!")
+		return
+
+	conductor.setup(song)
+	conductor.finished.connect(_on_song_finished)
 	start_game()
 	
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 
@@ -59,3 +67,6 @@ func _on_ball_hit_evaluated(target_player: int, target_y: float) -> void:
 		hud.set_new_score(score)
 		ball_out_sound.play()
 		shake_screen()
+
+func _on_song_finished() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
