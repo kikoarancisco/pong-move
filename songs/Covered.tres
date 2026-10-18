@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_h5076")
 title = "Covered"
-artist = "Francisco Arada"
+artist = "Francisco Arada (Kkiquu)"
 audio = ExtResource("1_k37g7")
 chart_path = "res://audio/covered.txt"
 metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

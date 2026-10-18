@@ -10,7 +10,7 @@ func _ready() -> void:
 		var button := Button.new()
 		button.text = "%s — %s" % [song.title, song.artist]
 		button.custom_minimum_size = Vector2(400, 50)
-		button.add_theme_font_size_override("font_size", 28)
+		button.add_theme_font_size_override("font_size", 64)
 		button.pressed.connect(_on_song_chosen.bind(song))
 		song_list.add_child(button)
 

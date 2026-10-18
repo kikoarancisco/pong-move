@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_eqwba")
-title = "Idol"
-artist = "Francisco Arada"
+title = "Idol (I bet)"
+artist = "Francisco Arada (Kkiquu)"
 audio = ExtResource("1_tnf3j")
 chart_path = "res://audio/idol.txt"
 metadata/_custom_type_script = "uid://c3vyq0cnsxiwu"

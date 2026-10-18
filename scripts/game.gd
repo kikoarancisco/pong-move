@@ -55,7 +55,7 @@ func _on_ball_hit_evaluated(target_player: int, target_y: float) -> void:
 	var paddle = paddle_one if target_player == 1 else paddle_two
 	var paddle_y = paddle.global_position.y
 	
-	if abs(paddle_y - target_y) < 55:
+	if abs(paddle_y - target_y) < 60:
 		ball.play_beep()
 	else:
 		# 1. Quem falhou concede ponto ao adversário
