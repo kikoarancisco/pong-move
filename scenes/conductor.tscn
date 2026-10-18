@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://di6cp6bo8g64r"]
+
+[ext_resource type="AudioStream" uid="uid://b4mn7u4o3hvby" path="res://audio/killingotr.ogg" id="1_emm5y"]
+[ext_resource type="Script" uid="uid://c33bsd7o3ile1" path="res://scripts/conductor.gd" id="2_q7w51"]
+
+[node name="Conductor" type="AudioStreamPlayer" unique_id=1619478478]
+stream = ExtResource("1_emm5y")
+script = ExtResource("2_q7w51")
+
+[node name="StartTimer" type="Timer" parent="." unique_id=194729227]

@@ -23,3 +23,7 @@ stream = ExtResource("2_f7cbr")
 
 [node name="Beep2" type="AudioStreamPlayer2D" parent="." unique_id=1572019902]
 stream = ExtResource("3_4dx81")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=51279767]
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)

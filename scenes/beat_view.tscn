@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://76aiq6n4gdmj"]
+
+[ext_resource type="Script" uid="uid://b61rao7fhc8ut" path="res://scenes/beat_view.gd" id="1_fagb4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_8ykry"]
+
+[node name="BeatView" type="Node2D" unique_id=2032178173]
+script = ExtResource("1_fagb4")
+
+[node name="B1" type="MeshInstance2D" parent="." unique_id=1276228850]
+position = Vector2(25, 0)
+scale = Vector2(50, 10)
+mesh = SubResource("QuadMesh_8ykry")
+
+[node name="B2" type="MeshInstance2D" parent="." unique_id=85751066]
+position = Vector2(88, 0)
+scale = Vector2(50, 10)
+mesh = SubResource("QuadMesh_8ykry")
+
+[node name="B3" type="MeshInstance2D" parent="." unique_id=1851646606]
+position = Vector2(151, 0)
+scale = Vector2(50, 10)
+mesh = SubResource("QuadMesh_8ykry")
+
+[node name="B4" type="MeshInstance2D" parent="." unique_id=543304694]
+position = Vector2(214, 0)
+scale = Vector2(50, 10)
+mesh = SubResource("QuadMesh_8ykry")

@@ -19,15 +19,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var move_dir = 0.0
-	move_dir = Input.get_axis(up_input,down_input)
+	move_dir = Input.get_axis(up_input, down_input)
 	velocity += move_dir * acceleration * delta
-	if move_dir ==0:
-		velocity = move_toward(velocity,0.0,2.0)
-	velocity = clampf(velocity,-MAX_VELOCITY,MAX_VELOCITY)
-	global_position.y+=velocity
-	global_position.y = clampf(global_position.y, 50, get_window().size.y-50)
+	if move_dir == 0:
+		velocity = move_toward(velocity, 0.0, 2.0)
+	velocity = clampf(velocity, -MAX_VELOCITY, MAX_VELOCITY)
+	global_position.y += velocity
+	global_position.y = clampf(global_position.y, 50, get_window().size.y - 50)
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Ball:
-		body.bounce_from_paddle(global_position.y,100)
+	pass
