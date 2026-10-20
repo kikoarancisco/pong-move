@@ -47,7 +47,7 @@ func start_game():
 func shake_screen() -> void:
 	var tween = create_tween()
 	# Puxa a câmara entre -8 e +8 píxeis aleatoriamente
-	camera.offset = Vector2(randf_range(-8.0, 8.0), randf_range(-8.0, 8.0))
+	camera.offset = Vector2(randf_range(-20.0, 20.0), randf_range(-20.0, 20.0))
 	# Faz a câmara voltar suavemente a zero em 0.15 segundos
 	tween.tween_property(camera, "offset", Vector2.ZERO, 0.15).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 

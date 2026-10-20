@@ -11,6 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://dmgj4u2jwi5vm" path="res://assets/explosion.wav" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://di6cp6bo8g64r" path="res://scenes/conductor.tscn" id="8_gee14"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_8ykry"]
+
 [sub_resource type="QuadMesh" id="QuadMesh_m2g58"]
 
 [sub_resource type="GDScript" id="GDScript_yqjtg"]
@@ -31,6 +33,14 @@ func _process(delta: float) -> void:
 script = ExtResource("1_uwrxv")
 default_song = ExtResource("2_vtaks")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1676103759]
+modulate = Color(1, 0, 0, 1)
+z_index = -20
+position = Vector2(624, 344.00003)
+rotation = 3.1415927
+scale = Vector2(1583.4053, -887.0367)
+mesh = SubResource("QuadMesh_8ykry")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=649751471]
 position = Vector2(640, 360)
 
@@ -38,7 +48,7 @@ position = Vector2(640, 360)
 modulate = Color(0, 0, 0, 1)
 z_index = -10
 position = Vector2(639.25, 360.75)
-scale = Vector2(1279.5, 722.5)
+scale = Vector2(1281.695, 740)
 mesh = SubResource("QuadMesh_m2g58")
 script = SubResource("GDScript_yqjtg")
 metadata/_edit_lock_ = true
